@@ -1,6 +1,7 @@
 import {v4 as uuid} from 'uuid'
 import {IProduct} from '../Interface'
-
+import { IUserdata } from '../Interface';
+import { IFormdata } from '../Interface';
 export const productlist : IProduct[] = [
     {
         id : uuid(),
@@ -43,3 +44,34 @@ export const productlist : IProduct[] = [
     },
 ]
 
+export const formdata : IFormdata=[
+    {
+       label:"title",
+       name:"title",
+       type:"text",
+       placeholder:"Enter your title",
+       id:"name",
+
+    },
+    {
+        label:"desc",
+       name:"desc",
+       type:"desc",
+       placeholder:"Enter your desc",
+       id:"email",
+    },
+    {
+        label:"url",
+       name:"url",
+       type:"text",
+       placeholder:"Enter your url",
+       id:"url",
+    },
+    {
+        label:"price",
+       name:"price",
+       type:"price",
+       placeholder:"Enter your price",
+       id:"price",
+    }
+]
