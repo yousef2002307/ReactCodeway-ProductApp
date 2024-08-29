@@ -1,7 +1,7 @@
 export interface IProduct{
     id ?: string | undefined
     title : string,
-    desc : string,
+    description : string,
     url : string,
 
     price : string,
@@ -16,7 +16,7 @@ export interface IProduct{
 
 export interface IUserdata{
    title : string,
-    desc : string,
+   description : string,
     url : string,
     price : string
 }

@@ -7,21 +7,30 @@ interface IProps {
 product : IProduct
 }
 export const ProductCard= ({product} : IProps) => {
+  
     return (
  <>
  <div className="max-w-sm md:max-w-lg mx-auto md:mx-0 rounded-lg shadow-lg  bg-white border border-gray-200 p-2 flex flex-col">
-    <Image srcimg={`${product.imageUrl}`} altimg="product" classes=" "/>
+    <Image srcimg={`${product.url}`} altimg="product" classes=" "/>
 
 <h2>{product.title}</h2>
 <p>
     {txtslicer(product.description)}
 
 </p>
+
 <div className="flex space-x-2 mt-3">
-<span className="w-5 h-5 bg-indigo-500 rounded-full"></span>
-<span className="w-5 h-5 bg-red-500 rounded-full"></span>
-<span className="w-5 h-5 bg-yellow-500 rounded-full"></span>
-</div>
+    {product.colors.map(el => {
+        return (
+         
+            <span key={el} className="w-5 h-5  rounded-full" style={{backgroundColor:el}}></span>
+
+
+
+
+        )
+    })}
+    </div>
 
 <div className="flex items-center justify-between">
     <span>{product.price}$</span>
